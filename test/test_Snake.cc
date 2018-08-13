@@ -27,7 +27,7 @@ TEST(SnakeTest, GrowTest)
 {
     Snake snake;
     sf::Vector2f v(width/2 + size, height/2);
-    snake.grow(v);
-    EXPECT_EQ(snake.getHeadPosition().x, width/2 + size);
+    snake.grow();
+    EXPECT_EQ(snake.getHeadPosition().x, width/2);
     EXPECT_EQ(snake.getHeadPosition().y, height/2);
 }

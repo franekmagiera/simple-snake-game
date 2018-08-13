@@ -12,7 +12,7 @@ private:
 public:
     Snake();
     void move();
-    void grow(const sf::Vector2f & newHead);
+    void grow();
     void changeDirection(const Direction direction_) { direction = direction_; }
     Direction getDirection() const { return direction; }
     const sf::Vector2f & getHeadPosition() const { return d[0].getPosition(); }

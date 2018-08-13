@@ -23,24 +23,7 @@ void Game::mainLoopBody(Direction newDir)
     // check if snake touches food and if he does he should grow
     sf::Vector2f foodPosition = food.getPosition();
     if (foodPosition.x == head.x && foodPosition.y == head.y) {
-        sf::Vector2f newHead(head);
-        switch(snake.getDirection()) {
-            case Direction::left :
-                newHead.x = head.x - size;
-                break;
-            case Direction::right :
-                newHead.x = head.x + size;
-                break;
-            case Direction::up :
-                newHead.y = head.y - size;
-                break;
-            case Direction::down :
-                newHead.y = head.y + size;
-                break;
-            default :
-                break;
-        }
-        snake.grow(newHead);
+        snake.grow();
         score++;
         if (sleepTime > sleepTimeLowerLimit)
             sleepTime -= sleepTimeDecrement;

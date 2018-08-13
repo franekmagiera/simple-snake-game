@@ -20,13 +20,23 @@ Snake::Snake()
     direction = Direction::right;
 }
 
-void Snake::grow(const sf::Vector2f & newHead)
+void Snake::grow()
 {
-    sf::RectangleShape r;
+    sf::RectangleShape r1, r2, r3;
     sf::Vector2f v(size, size);
-    r.setSize(v);
-    r.setPosition(newHead);
-    d.push_front(r);
+    r3.setSize(v);
+    r1 = *(d.end() - 1);
+    r2 = *(d.end() - 2);
+    if (r1.getPosition().x == r2.getPosition().x) {
+        v.x = r1.getPosition().x;
+        v.y = (r1.getPosition().y > r2.getPosition().y) ? (r1.getPosition().y + size) : (r1.getPosition().y - size); 
+    }
+    if (r1.getPosition().y == r2.getPosition().y) {
+        v.y = r1.getPosition().y;
+        v.x = (r1.getPosition().x > r2.getPosition().x) ? (r1.getPosition().x + size) : (r1.getPosition().x - size);
+    }
+    r3.setPosition(v);
+    d.push_back(r3);
 }
 
 void Snake::move()
