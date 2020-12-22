@@ -1,5 +1,5 @@
-#include "Food.h"
-#include "Constants.h"
+#include "../include/Food.h"
+#include "../include/Constants.h"
 #include <gtest/gtest.h>
 
 TEST(FoodTest, InitializationTest)

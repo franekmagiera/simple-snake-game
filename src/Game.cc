@@ -1,4 +1,4 @@
-#include "Game.h"
+#include "../include/Game.h"
 #include <SFML/Graphics.hpp>
 
 void Game::mainLoopBody(Direction newDir)

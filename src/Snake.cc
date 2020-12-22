@@ -1,5 +1,5 @@
-#include "Snake.h"
-#include "Constants.h"
+#include "../include/Snake.h"
+#include "../include/Constants.h"
 #include <SFML/Graphics.hpp>
 
 Snake::Snake()

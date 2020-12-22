@@ -1,5 +1,5 @@
-#include "Game.h"
-#include "Constants.h"
+#include "../include/Game.h"
+#include "../include/Constants.h"
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
